@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+:root 
+{
+    --bg: #1a1a1a;
+    --primary-color: #f8192c;
+    --secondary-color: #161719;
+    --tertiary-color:  #161719;
+
+    --text-primary: #fff;
+    --text-secondary: #5b5b5e;
+
+
+    --section-padding: 120px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {list-style: none;}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {height: auto;}
+
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+}
+
+input {width: 100%;}
+
+button {cursor: pointer;}
+
+address {font-style: normal;}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg);
+    font-size: 1.6rem;
+    display: grid;
+}
+
+:focus-visible { outline-offset: 4px;}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 7px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--secondary-color);
+    transition: 0.5s;
+    z-index: 10000;
+} 
+
+.logo {
+    width: 30%;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+header ul li {
+    margin: 10px;
+}
+
+header ul li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: 0.3s linear;
+    font-size: 0.8em;
+}
+
+header .logout {
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 7px;
+    padding-right: 20px;
+}
+
+header ul li a:hover {
+    color: var(--primary-color);
+}
+
+header .action {
+    display: flex;
+}
+
+header .action .searchBx {
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--text-primary);
+    border-radius: 30px;
+    width: 200px;
+}
+
+header .action .searchBx i{
+    font-size: 1.4em;
+    margin: 5px;
+    color: var(--bg);
+}
+
+header .action .searchBx input {
+    outline: none;
+    border: none;
+    font-size: 1em;
+    color: var(--secondary-color);
+}
+
+section ul {
+    margin-left: 30px;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+section ul h2 {
+    color: white;
+    margin-right: 30px;
+    font-size: 30px;
+}
+
+section ul h1 {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    font-size: 120px;
+    font-weight: 800;
+    z-index: -1;
+    color: var(--text-primary);
+    opacity: 0.05;
+    text-transform: uppercase;
+}
+
+section ul .lines {
+    height: 1px;
+    width: 100px;
+    background: #fff;
+    margin-right: 30px;
+    margin-top: 24px;
+}
+
+section ul li:hover {
+    background: var(--primary-color);
+    color: var(--text-primary);
+}
+
+section ul li {
+    border:1px solid var(--primary-color);
+    color: var(--text-primary);
+    padding: 8px 20px;
+    margin: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+section ul li.active {
+    background-color: var(--primary-color);
+}
+
+.cards {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 50px;
+    transform: translate(-50%, -50%);
+    top: 70%;
+    left: 45.5%;
+}
+
+.product {
+    position: relative;
+    margin-left: 25px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    gap: 7em;
+    row-gap: 1.5em;
+}
+
+.product .card {
+    position: relative;
+    width: 390px;
+    height: 450px;
+    background: var(--tertiary-color);
+    border-radius: 10px;
+    overflow: hidden;
+    /* cursor: pointer; */
+}
+
+.product .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+
+.product .card:hover::before {
+    clip-path: circle(300px at 80% -20%);
+}
+
+/* .product .card::after {
+    content: 'Mouse';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 9em;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--text-primary);
+    opacity: 0.05;
+} */
+
+.product .card .bgtext {
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 6em;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--text-primary);
+    opacity: 0.05;
+}
+
+.product .card .imgBx {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+
+.product .card:hover .imgBx {
+    top: 0%;
+    transform: translateY(0%);
+}
+
+.product .card .imgBx img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-25deg);
+    width: 270px;
+}
+
+.product .card .contentBx {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+
+.product .card:hover .contentBx {
+    height: 210px;
+}
+
+.product .card .contentBx h2 {
+    position: relative;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+}
+
+.product .card .contentBx .specs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: -10px; 
+}
+
+.product .card:hover .contentBx .specs {
+    opacity: 1;
+    visibility: visible; 
+    transition-delay: 0.5s;
+}
+
+
+.product .card .contentBx .specs h3 {
+    color: var(--text-primary);
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.product .card .contentBx .specs p {
+    color: var(--text-secondary);
+    
+}
+
+.product .card .contentBx a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
+    font-weight: 600;
+    color: var(--text-primary);
+    opacity: 0;
+    transform: translate(50px);
+    transition: 0.5s;
+}
+
+.product .card:hover .contentBx a {
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.75s;
+}
