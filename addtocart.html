@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add to Cart</title>
+<script type="text/javascript" src="addToCart.js"></script>
+
+</head>
+<link rel="stylesheet" href="addToCart.css">
+<body>
+    <div class="container">
+        <div class="card" id="item1">
+            <img src="mouse1.jpg">
+            <div class="title">Razer Mouse</div>
+            <div>
+                <label>QUANTITY: </label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <button onclick="addToCart (item1)">Add to Cart</button>
+        </div>
+        <div class="card" id="item2">
+            <img src="mouse2.jfif">
+            <div class="title">Aula Mouse</div>
+            <div>
+                <label>QUANTITY: </label>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <button onclick="addToCart (item2)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="cart" id="cart">
+        <div class="title">CART</div><hr/>
+        <div id="title"></div>
+    </div>
+
+        
+        
+
+</body>
+</html>

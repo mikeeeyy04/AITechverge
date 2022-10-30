@@ -135,6 +135,9 @@ header .action .searchBx input {
     font-size: 1em;
     color: var(--secondary-color);
 }
+section {
+    overflow: visible;
+}
 
 section ul {
     margin-left: 30px;

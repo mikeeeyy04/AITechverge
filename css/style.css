@@ -135,6 +135,7 @@ header .action .searchBx input {
     color: var(--secondary-color);
 }
 
+
 /*====================HOME=======================*/
 
 .banner {
@@ -145,6 +146,38 @@ header .action .searchBx input {
     display: flex;
     margin-bottom: 20px;
 }
+
+.banner .bgwelcome {
+    position: absolute;
+    color: var(--text-primary);
+    width: 35%;
+    z-index: -1;
+    opacity: 0.04;
+    left: 8%;
+    top: 15%;
+    animation: rotation1 50s infinite linear;
+}
+
+.banner .bgwelcome1 {
+    position: absolute;
+    color: var(--text-primary);
+    font-size: 150px;
+    z-index: 0;
+    opacity: 0.03;
+    right: -35%;
+    top: 25%;
+    transform: translate(0%, 0%) rotate(90deg);
+}
+
+@keyframes rotation1 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
 
 .banner .social {
     display: flex;
@@ -187,6 +220,7 @@ header .action .searchBx input {
     background: -webkit-linear-gradient(45deg, var(--primary-color), #b82c37, var(--primary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-size: 5em;
     letter-spacing: 1px;
     font-weight: 700;
@@ -288,14 +322,40 @@ a#scroll-btn {
     font-weight: 600;
   }
 
+  .bxl-facebook-circle {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .bxl-facebook-circle:hover {
+    transform: scale(1.5);
+  }
+
+  .bxl-instagram-alt {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .bxl-instagram-alt:hover {
+    transform: scale(1.5);
+  }
+
+  .bxl-twitter {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  .bxl-twitter:hover {
+    transform: scale(1.5);
+  }
+  
+
 
 
 /*====================PRODUCTS=======================*/
 
 #products {
-    background: var(--secondary-color);
+    background: var(--bg);
     overflow: hidden;
-    
+    margin-bottom: 100px;
+    height: 115vh;
 }
 
 .featuring-main-title-products {
@@ -319,9 +379,9 @@ a#scroll-btn {
     z-index: 0;
     font-weight: 700;
     color: #fff;
-    opacity: 0.03;
+    opacity: 0.04;
     transform: translate(-50%, -50%);
-    top: 100%;
+    top: 60%;
     left: 50%;
     text-align: center;
 }
@@ -396,7 +456,6 @@ a#scroll-btn {
     color: #f8192c;
     opacity: 0.3;
     margin-left: 80px;
-    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .background-text-mouse {
@@ -432,13 +491,8 @@ a#scroll-btn {
     z-index: 2;
 }
 
-.background-text-mouse:hover .mouse-name-text {
+.second-text-mouse:hover .mouse-bottom-left-text{ 
     transform: translateY(-40%);
-
-}
-
-.second-text-mouse:hover .mouse-bottom-left-text{
-    transform: translateY(-60%);
 }
 
 .mouse-bottom-left-text {
@@ -460,6 +514,7 @@ a#scroll-btn {
     color: tomato;
     display: inline-block;
     vertical-align: middle;
+    z-index: 5;
 }
 
 .browse-btn {
@@ -467,8 +522,11 @@ a#scroll-btn {
     vertical-align: middle;
     color: rgb(140, 135, 135);
     font-size: 20px;
-    margin-left: 15px;
+    margin-left: 30px;
+    z-index: 5;
 }
+
+
 
 /*Headset product css for feature*/
 
@@ -488,6 +546,10 @@ a#scroll-btn {
     margin: 20px;
     bottom: 0; 
     cursor: pointer; 
+}
+
+#main-second-row-products {
+    margin-bottom: 200px;
 }
 
 .headset-product-content {
@@ -576,11 +638,17 @@ a#scroll-btn {
     font-weight: 600;
     z-index: 3;
     margin-bottom: -10px;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .headset-sub-content-pic {
     width: 400px;
     box-shadow: 1px 1px 10px white;
+}
+
+
+.second-text-headset:hover .headset-bottom-left-text{ 
+    transform: translateY(-40%);
 }
 
 /*keyboard product css for feature*/
@@ -688,11 +756,16 @@ a#scroll-btn {
     font-weight: 600;
     z-index: 3;
     margin-bottom: -10px;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .keyboard-sub-content-pic {
     width: 400px;
     box-shadow: 1px 1px 10px white;
+}
+
+.second-text-keyboard:hover .keyboard-bottom-left-text{ 
+    transform: translateY(-40%);
 }
 
 /*mats product css for feature*/
@@ -801,6 +874,7 @@ a#scroll-btn {
     font-weight: 600;
     z-index: 3;
     margin-bottom: -10px;
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .mats-sub-content-pic {
@@ -808,6 +882,9 @@ a#scroll-btn {
     box-shadow: 1px 1px 10px white;
 }
 
+.second-text-mats:hover .mats-bottom-left-text{ 
+    transform: translateY(-40%);
+}
 
 
 
@@ -828,105 +905,6 @@ a#scroll-btn {
      
      
  }
- 
- #ourteam .card-ot {
-    
-     margin: 5px;
-     width: 320px;
-     height: 400px;
-     background-color: #f8192c;
-     background-position: center center;
-     background-size: cover;
-     text-align: center;
-     overflow: hidden;
-   position: relative;
-     box-shadow: 0px 30px 30px -20px rgba(0, 0, 0, 9),
-                 inset 0 0 0 1000px rgba(67, 52, 109, .6);
-     transition: all .4s cubic-bezier(.37, .36, .35,1);
- 
-     
- }
- 
- #ourteam .card-ot:hover {
-     box-shadow: 0px 30px 30px -20px rgba(0, 0, 0, 9),
-     inset 0 0 0 1000px rgba(67, 52, 109, 0.2);
- }
- 
- #ourteam .card-ot:hover .avatar-ot {
- animation: none;
- box-shadow: 0;
- width: 150px;
- height: 150px;
- }
- 
- #ourteam .card-ot:hover .profile-ot {
- opacity: 1;
- bottom: 0;
- }
- 
- #ourteam .avatar-ot {
-     width: 120px;
-     height: 120px;
-     position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     border: 2px solid #f8192c;
-     border-radius: 100%;
-     transition: all .4s cubic-bezier(.37, .36, .35,1);
-     animation: circles 4s infinite;
-     box-shadow: 0 30px 30px -25px rgba(0,0,0,0.6);
-     overflow: hidden;
-     margin: auto;
- }
- 
- #ourteam .avatar-ot img {
-     height: 100%;
-     width: 100%;
-    
- }
- 
- #ourteam .profile-ot {
-     opacity: 0;
-     position: absolute;
-     bottom: 100px;
-     width: 100%;
-     transition: all .5s cubic-bezier(.37, .26, .35,1);
-     margin-bottom: 20px;
- }
- 
- #ourteam .profile-ot h1 {
-     font-size: 50px;
-     color: white;
-     font-weight: 400;
- }
- 
- #ourteam .profile-ot h3 {
-  font-size: 30px;
-  font-weight: 300;
- 
- }
- 
- @keyframes circles {
-     0%{
-         box-shadow: 0px 30px 30px -25px rgba(0,0,0,0.6),
-         0px 0px 0px 0px white,
-         0px 0px 0px 0px white,
-         0px 0px 0px 0px white,
-         0px 0px 0px 0px #ffff,
-         0px 0px 0px 0px #ffff;
-     }
-     100%{
-         box-shadow: 0px 30px 30px -25px rgba(0,0,0,0.6),
-         0px 0px 0px 70px rgba(102,52,105,0),
-         0px 0px 0px 200px rgba(102,52,105,0),
-         0px 0px 0px 300px rgba(102,52,105,0),
-         0px 0px 0px 900px rgba(102,52,105,0); 
-     }
- }
-
-
 
 
  
@@ -1051,7 +1029,7 @@ a#scroll-btn {
     color: #000;
 }
 
-
+/*========================REVEAL==================*/
  
 .reveal {
     position: relative;
@@ -1064,3 +1042,72 @@ a#scroll-btn {
     transform: translateY(0px);
     opacity: 1;
 }
+
+/*================================================*/
+
+
+
+
+
+/*========================PARTNERS==================*/
+
+#partners {
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+.slider {
+    height: 40vh;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+    margin-bottom: 100px;
+}
+
+.slider h2 {
+    text-align: center;
+    padding: 0 10px 40px;
+    font-size: 80px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.slider h1 {
+    position: absolute;
+    font-size: 225px;
+    z-index: -1;
+    font-weight: 700;
+    color: var(--text-primary);
+    opacity: 0.04;
+    transform: translate(-50%, -50%);
+    top: 20%;
+    left: 50%;
+    text-align: center;
+    
+}
+
+.slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+
+.slider .slide {
+    height: 100px;
+    width: 250px;
+    margin-left: 30px;
+    opacity: 0.5;
+}
+
+/*================================================*/
