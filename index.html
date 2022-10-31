@@ -17,7 +17,7 @@
 <body>
     <!---=======================HEADER====================-->
     <header>
-        <a href="index.html">
+        <a href="#">
             <img class="logo" src="img/logo.png" alt="logo" width="100%">
         </a>
 
@@ -26,10 +26,13 @@
             <!-- <li><a href="#">About</a></li> -->
             <li><a href="products.html">Products</a></li>
             <li><a href="#partners">Partners</a></li>
-            <li><a href="#">Feedbacks</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li><a href="#review">Feedbacks</a></li>
+            <li><a href="contact.html">Contacts</a></li> 
         </ul>
+        <div id="tooltip">
+        <span id="tooltipText">Logout</span>
         <a class="logout" href="#"><i class='bx bx-log-out'></i></a>
+        </div>
         <div class="action">
             <div class="searchBx">
                 <a href="#"><i class='bx bx-search'></i></a>
@@ -41,13 +44,13 @@
     </header>
 
 
-    <div class="banner">
+    <div class="banner" id="banner">
       <h1 class="bgwelcome1">AITECHVERGE</h1>
       <img class="bgwelcome" src="img/ai.svg">
         <div class="social">
             <div class="line"></div>
-            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
-            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100087376299273" target="_blank"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="https://www.instagram.com/AlTechverge__/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
             <a href="#"><i class='bx bxl-twitter' ></i></a>
         </div>
 
@@ -55,8 +58,7 @@
         <div class="bg">
             <div class="content">
                 <h1>Welcome User!</h1>
-                <h2>Here are some new<br>
-                Products for you!</h2>
+                <h2><span class="auto-type"></span></h2>
 
                 <a href="#" class="btn">Check it now!</a>
             </div>
@@ -76,11 +78,11 @@
       </div>
 
       <div class="main-content-products reveal">
-          <div class="mouse-product">
+          <div class="mouse-product" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
             <div class="background-text-mouse"> 
               <p class="mouse-name-text">MOUSE</p>
             </div> 
-            <div class="mouse-product-content">
+            <div class="mouse-product-content" >
               <p class="text-mouse-starting">Starting from</p>
               <p class="mouse-price">	&#8369; 1,850.00 </p> 
               <div class="second-text-mouse">
@@ -92,7 +94,7 @@
             <div class="img-mouse"></div>
           </div>
 
-          <div class="headset-product">
+          <div class="headset-product" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
             <div class="background-text-headset"> 
               <p class="headset-name-text">HEADSE</p> 
             </div>
@@ -110,7 +112,7 @@
         </div>
 
         <div class="main-content-products reveal">
-          <div class="keyboard-product">
+          <div class="keyboard-product" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
             <div class="background-text-keyboard">
               <p class="keyboard-name-text">KEYBOA</p>
             </div>
@@ -126,7 +128,7 @@
             <div class="img-keyboard"></div>
           </div>
 
-          <div class="mats-product">
+          <div class="mats-product" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
             <div class="background-text-mats">
               <p class="mats-name-text">MATS</p>
             </div>
@@ -182,7 +184,7 @@
 
 <section id="partners">
 <div class="slider reveal">
-  <h2 class="reveal">Our Best Partners</h2>
+  <h2 class="reveal">Our Partners</h2>
   <h1>PARTNERS</h1>
   <div class="slide-track reveal">
     <div class="slide">
@@ -285,9 +287,11 @@
 
 <!-- REVIEW BY POGI MEL MATHEW JR AND SENIOR  -->
 <section id="review">
-  <h2>Review</h2>
+  <h1 class="reviews">REVIEW</h1>
+  <h2 data-text="Review">REVIEW</h2>
+
   <div class="wrapper responsive">
-      <div class="item">
+      <div class="item" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
           <i class="fa-solid fa-quote-right"></i>
           <div class="down"></div>
           <div class="card">
@@ -303,7 +307,7 @@
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nihil consequuntur laborum ipsam suscipit porro sequi recusandae quidem necessitatibus temporibus rerum, dolorum, asperiores harum numquam libero debitis esse commodi aut.</p>
           </div>
       </div>
-      <div class="item">
+      <div class="item" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
           <i class="fa-solid fa-quote-right"></i>
           <div class="down"></div>
           <div class="card">
@@ -319,7 +323,7 @@
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nihil consequuntur laborum ipsam suscipit porro sequi recusandae quidem necessitatibus temporibus rerum, dolorum, asperiores harum numquam libero debitis esse commodi aut.</p>
           </div>
       </div>
-      <div class="item">
+      <div class="item" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
           <i class="fa-solid fa-quote-right"></i>
           <div class="down"></div>
           <div class="card">
@@ -335,7 +339,7 @@
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nihil consequuntur laborum ipsam suscipit porro sequi recusandae quidem necessitatibus temporibus rerum, dolorum, asperiores harum numquam libero debitis esse commodi aut.</p>
           </div>
       </div>
-      <div class="item">
+      <div class="item" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
           <i class="fa-solid fa-quote-right"></i>
           <div class="down"></div>
           <div class="card">
@@ -351,7 +355,7 @@
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nihil consequuntur laborum ipsam suscipit porro sequi recusandae quidem necessitatibus temporibus rerum, dolorum, asperiores harum numquam libero debitis esse commodi aut.</p>
           </div>
       </div>
-      <div class="item">
+      <div class="item" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
           <i class="fa-solid fa-quote-right"></i>
           <div class="down"></div>
           <div class="card">
@@ -367,7 +371,7 @@
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nihil consequuntur laborum ipsam suscipit porro sequi recusandae quidem necessitatibus temporibus rerum, dolorum, asperiores harum numquam libero debitis esse commodi aut.</p>
           </div>
       </div>
-      <div class="item">
+      <div class="item" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
           <i class="fa-solid fa-quote-right"></i>
           <div class="down"></div>
           <div class="card">
@@ -383,6 +387,54 @@
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nihil consequuntur laborum ipsam suscipit porro sequi recusandae quidem necessitatibus temporibus rerum, dolorum, asperiores harum numquam libero debitis esse commodi aut.</p>
           </div>
       </div>
+      <div class="item" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
+        <i class="fa-solid fa-quote-right"></i>
+        <div class="down"></div>
+        <div class="card">
+            <img src="img/mcrey.png" alt=""> 
+            <h4 class="heading">Mcrey Ronquillo</h4>  
+            <div class="star">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i> 
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i> 
+        </div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nihil consequuntur laborum ipsam suscipit porro sequi recusandae quidem necessitatibus temporibus rerum, dolorum, asperiores harum numquam libero debitis esse commodi aut.</p>
+        </div>
+    </div>
+    <div class="item" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
+      <i class="fa-solid fa-quote-right"></i>
+      <div class="down"></div>
+      <div class="card">
+          <img src="img/dan.jpg" alt=""> 
+          <h4 class="heading">Dan Gajultos</h4>  
+          <div class="star">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i> 
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i> 
+      </div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nihil consequuntur laborum ipsam suscipit porro sequi recusandae quidem necessitatibus temporibus rerum, dolorum, asperiores harum numquam libero debitis esse commodi aut.</p>
+      </div>
+  </div>
+  <div class="item" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
+    <i class="fa-solid fa-quote-right"></i>
+    <div class="down"></div>
+    <div class="card">
+        <img src="img/insigne.jpg" alt=""> 
+        <h4 class="heading">John Paul Insigne</h4>  
+        <div class="star">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i> 
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i> 
+    </div>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nihil consequuntur laborum ipsam suscipit porro sequi recusandae quidem necessitatibus temporibus rerum, dolorum, asperiores harum numquam libero debitis esse commodi aut.</p>
+    </div>
+  </div>
   </div>
 
 </section>  
@@ -425,5 +477,21 @@ settings: {
 });
 </script>
 
+<script src="js/vanilla-tilt.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+
+var typed = new Typed('.auto-type', {
+  strings: ["Here are some new products for you!", "We're happy to help!", 
+    "Have a nice day!", "Hello, How are you?", "We hope you are doing fine!"],
+  typeSpeed: 40,
+  backSpeed: 30,
+  backDelay: 3000,
+  loop: true,
+
+});
+
+</script>
 </body>
 </html>

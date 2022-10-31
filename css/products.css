@@ -135,6 +135,45 @@ header .action .searchBx input {
     font-size: 1em;
     color: var(--secondary-color);
 }
+
+#tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+#tooltipText {
+    position: absolute;
+    left: 37%;
+    top: 120%;
+    transform: translateX(-50%);
+    background: var(--text-primary);
+    color: var(--bg);
+    white-space: nowrap;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#tooltipText::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    border: 8px solid;
+    border-color: #0000 #0000 #fff #0000;
+}
+
+#tooltip:hover #tooltipText {
+    visibility: visible;
+    opacity: 1;
+}
+
+
 section {
     overflow: visible;
 }
