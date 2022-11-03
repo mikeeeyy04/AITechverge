@@ -74,24 +74,182 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 7px 30px;
+    padding: 5px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--secondary-color);
     transition: 0.5s;
-    z-index: 1000;
+    z-index: 10;
 } 
 
 .logo {
-    width: 30%;
+    width: 20%;
+    margin-left: -70px;
 }
 
 .nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 10px;
+    padding: 16px 10px;
+    height: 6vh;
+}
+
+.container1 {
+    max-width: 1068px;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.nav-icons .bx {
+    font-size: 22px;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    place-items: center;
+    color: var(--text-primary);
+    border: 1px solid var(--text-primary);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#bell-icon {
+    position: relative;
+}
+
+#bell-icon span {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2000;
+    transition: 0.3s;
+    transform: translateX(-319%);
+}
+
+.menu-icon div {
+    display: block;
+    background: var(--text-primary);
+    height: 2px;
+    width: 25px;
+    transition: 0.3s;
+}
+
+.move .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+.move .line2 {
+    opacity: 0;
+}
+
+.move .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}
+
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 22%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.6s;
+    clip-path: circle(0% at 0% 0%);
+}
+
+.menu.active2 {
+    clip-path: circle(154% at 0% 0%);
+}
+
+.menu p {
+    font-size: 12px;
+    color: var(--text-primary);
+    position: absolute;
+    text-align: center;
+    bottom: 2em;
+}
+
+.notification {
+    position: absolute;
+    top: 110%;
+    right: 7rem;
+    background: var(--secondary-color);
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    clip-path: circle(0% at 100% 0%);
+}
+
+.notification.active {
+    clip-path: circle(144% at 0% 0%);
+    transition: 0.4s;
+}
+
+.notification-box {
+    display: flex;
+    align-items: baseline;
+    column-gap: 1rem;
+    border-radius: 0.5rem;
+    background: var(--text-secondary);
+    padding: 10px;
+    color: var(--text-primary);
+}
+
+.notification-box .bx {
+    color: rgb(46, 255, 81);
+}
+
+.box-color {
+    background: #89898d;
+}
+
+.navbar {
+    display: grid;
+    row-gap: 1rem;
+    text-align: center;
+    transform: translateX(50%);
+
+}
+
+.navbar a {
+    font-size: 2.4rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.navbar a:hover {
+    border-bottom: 4px solid var(--primary-color);
 }
 
 header ul li {
@@ -107,13 +265,13 @@ header ul li a {
     font-size: 0.8em;
 }
 
-header #tooltip .logout {
+/* header #tooltip .logout {
     color: #fff;
     font-size: 25px;
     text-align: center;
     margin-top: 8px;
     padding-right: 20px;
-}
+} */
 
 header ul li a:hover {
     color: var(--primary-color);
@@ -154,8 +312,8 @@ header .action .searchBx input {
 
 #tooltipText {
     position: absolute;
-    left: 37%;
-    top: 120%;
+    left: 55%;
+    top: 140%;
     transform: translateX(-50%);
     background: var(--text-primary);
     color: var(--bg);
@@ -166,8 +324,9 @@ header .action .searchBx input {
     font-weight: 500;
     visibility: hidden;
     opacity: 0;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
+
 
 #tooltipText::before {
     content: '';
@@ -183,6 +342,7 @@ header .action .searchBx input {
     visibility: visible;
     opacity: 1;
 }
+
 
 
 /*====================HOME=======================*/
@@ -336,8 +496,8 @@ a#scroll-btn {
     right: 0;
     bottom: 4em;
     border-radius: 3em;
-  }
-  a#scroll-btn:before {
+}
+a#scroll-btn:before {
     position: absolute;
     content: "";
     margin: auto;
@@ -349,8 +509,8 @@ a#scroll-btn {
     background-color: #ffffff;
     border-radius: 50%;
     animation: move-down 2s infinite;
-  }
-  @keyframes move-down {
+}
+@keyframes move-down {
     80% {
       opacity: 0.5;
     }
@@ -358,9 +518,9 @@ a#scroll-btn {
       transform: translateY(20px);
       opacity: 0;
     }
-  }
-  a#scroll-btn:after {
-    position: absolute;
+}
+a#scroll-btn:after {
+position: absolute;
     content: "Scroll Down";
     display: block;
     width: 12em;
@@ -371,32 +531,32 @@ a#scroll-btn {
     color: #ffffff;
     letter-spacing: 3px;
     font-weight: 600;
-  }
+}
 
-  .bxl-facebook-circle {
+.bxl-facebook-circle {
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
+}
 
-  .bxl-facebook-circle:hover {
+.bxl-facebook-circle:hover {
     transform: scale(1.5);
-  }
+}
 
-  .bxl-instagram-alt {
+.bxl-instagram-alt {
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
+}
 
-  .bxl-instagram-alt:hover {
+.bxl-instagram-alt:hover {
     transform: scale(1.5);
-  }
+}
 
-  .bxl-twitter {
+.bxl-twitter {
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-  }
+}
 
-  .bxl-twitter:hover {
+.bxl-twitter:hover {
     transform: scale(1.5);
-  }
-  
+}
+
 
 
 
@@ -1251,7 +1411,7 @@ a#scroll-btn {
     height: 50vh;
     background: #200101;
     position: absolute;
-    z-index: 100;
+    z-index: 1;
     box-shadow: 0px 30px 20px black;
 }
 
